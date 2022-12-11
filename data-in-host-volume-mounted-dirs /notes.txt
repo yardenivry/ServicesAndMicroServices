@@ -15,3 +15,10 @@ CREATE TABLE mytable (id INT);
 SHOW Tables;
 
 # Now the db table was added.
+
+# After this action the volume will be deleted, if i want to save that i'll reconfigure the Docker-copose file and add the line: 
+volumes:
+  - ./data:/var/www/html
+# I wrote t my "data" folder the data from /var/www/html
+
+
