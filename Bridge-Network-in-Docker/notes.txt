@@ -1,0 +1,34 @@
+This section will talk about Bridge Network on Docker world.
+from here there will be an SQL Query for Creating my db Tables.
+
+**from now on there will be only commands**
+
+docker network ls
+# I'll see the previos networks that i created in the previos sections
+
+docker networks prune
+# Delete the previos networks
+
+docker run --rm my-webserver -d httpd
+# I'll run my docker and create a web server that uses httpd image and it recieves an ID
+
+docker inspect my-webserver
+# I'll see the IP Address that the webserver recieved
+
+docker run --rm <mygitaccount>:mycurl my-webserver
+# I'll enTer the curl into my repo, in the first time it'll not succeceeded but if i'll add the IP Address hat i got, it will work
+
+docker network create simple-network
+# Now i creating a simple network where we can connect our containers on
+
+docker network ls
+# Now ill see that i created a network
+
+docker run --rm -d --name my-webserver --network simple-network httpd
+# now i'll run my container with the name my-webserver with the simple-network that i crrated with httpd image
+
+docker run --rm -- network simple-network <mygitaccount>/mycurl webserver
+# Now i'll enter this container to my repo with the network + i added the correct curl
+
+docker inspect my-webserver
+# and now it will be fixed the problem before
