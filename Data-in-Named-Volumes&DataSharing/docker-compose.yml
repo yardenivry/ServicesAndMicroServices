@@ -9,9 +9,6 @@ services:
       MYSQL_ROOT_PASSWORD: my!!!root!!!pw
       MYSQL_DATABASE: somedatabase
 
-  dbclient:
-    image: mysql:latest
-    depends_on:
-      - db
-    command: mysql -uroot -pmy!!!root!!!pw -hdb
-    
+volumes:
+  my-vol:
+   #  name:my-vol 
