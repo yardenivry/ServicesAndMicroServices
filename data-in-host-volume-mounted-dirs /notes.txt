@@ -1,0 +1,17 @@
+from here there will be an SQL Query for Creating my db Tables.
+
+**from now on there will be onl commands**
+
+USE somedatabase;
+
+# Create a new database confs
+
+SHOW Tables;
+
+# Dont appear yet nothing because i just created a db but not db table 
+
+CREATE TABLE mytable (id INT);
+
+SHOW Tables;
+
+# Now the db table was added.
