@@ -1,2 +1,2 @@
 # ServicesAndMicroServices
-List of all optional services&amp;MicroServices and their description.
+List of all optional Services&amp;MicroServices and their description.
