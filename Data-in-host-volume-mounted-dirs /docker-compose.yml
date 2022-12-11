@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    container_name: myphpapp-db
+    environment:
+      MYSQL_ROOT_PASSWORD: my!!!root!!!pw
+      MYSQL_DATABASE: somedatabase
+
+  dbclient:
+    image: mysql:latest
+    depends_on:
+      - db
+    command: mysql -uroot -pmy!!!root!!!pw -hdb
+    
